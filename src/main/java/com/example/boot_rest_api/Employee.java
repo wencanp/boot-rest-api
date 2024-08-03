@@ -14,13 +14,13 @@ import lombok.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private String employee_id;
 
     @NonNull
-    private String firstName;
+    private String first_name;
 
     @NonNull
-    private String lastName;
+    private String last_name;
 
     @NonNull
     private String email;
