@@ -33,4 +33,9 @@ public class EmployeeController {
                 .toUri();
         return ResponseEntity.created(location).build();
     }
+
+    @PutMapping
+    public void updateEmployee(@RequestBody Employee employee) {
+        employeeManager.updateEmployee(employee);
+    }
 }

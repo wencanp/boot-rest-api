@@ -43,4 +43,16 @@ public class EmployeeManager {
     public void addEmployee(Employee employee) {
         list.getEmployeeList().add(employee);
     }
+
+    public void updateEmployee(Employee employee) {
+        for (Employee e : list) {
+            if (e.getEmployee_id().equals(employee.getEmployee_id())) {
+                e.setFirst_name(employee.getFirst_name());
+                e.setLast_name(employee.getLast_name());
+                e.setEmail(employee.getEmail());
+                e.setTitle(employee.getTitle());
+                return;
+            }
+        }
+    }
 }
