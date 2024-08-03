@@ -31,6 +31,15 @@ public class EmployeeManager {
 
     public Employees getAllEmployees() { return list; }
 
+    public Employee getEmployeeById(String id) {
+        for (Employee employee : list) {
+            if (employee.getEmployee_id().equals(id)) {
+                return employee;
+            }
+        }
+        return null;
+    }
+
     public void addEmployee(Employee employee) {
         list.getEmployeeList().add(employee);
     }

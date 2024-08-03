@@ -1,9 +1,10 @@
 package com.example.boot_rest_api;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class Employees {
+public class Employees implements Iterable<Employee> {
     private List<Employee> employeeList;
 
     public List<Employee> getEmployeeList() {
@@ -15,5 +16,10 @@ public class Employees {
 
     public void setEmployeeList(List<Employee> employeeList) {
         this.employeeList = employeeList;
+    }
+
+    @Override
+    public Iterator<Employee> iterator() {
+        return employeeList.iterator();
     }
 }

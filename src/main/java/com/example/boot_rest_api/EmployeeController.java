@@ -17,12 +17,18 @@ public class EmployeeController {
         return employeeManager.getAllEmployees();
     }
 
+    @GetMapping(value = "/{id}", produces = "application/json")
+    public Employee getEmployeeById(@PathVariable String id) {
+        return employeeManager.getEmployeeById(id);
+    }
+
     @PostMapping(consumes = "application/json", produces = "application/json")
     public ResponseEntity<Object> addEmployee(@RequestBody Employee employee) {
         employeeManager.addEmployee(employee);
 
         URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest().path("/{id}")
+                .fromCurrentRequest()
+                .path("/{id}")
                 .buildAndExpand(employee.getEmployee_id())
                 .toUri();
         return ResponseEntity.created(location).build();
