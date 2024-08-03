@@ -55,4 +55,13 @@ public class EmployeeManager {
             }
         }
     }
+
+    public void deleteEmployeeById(String id) {
+        for (Employee e : list) {
+            if (e.getEmployee_id().equals(id)) {
+                list.removeEmployee(e);
+                return;
+            }
+        }
+    }
 }

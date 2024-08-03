@@ -22,4 +22,8 @@ public class Employees implements Iterable<Employee> {
     public Iterator<Employee> iterator() {
         return employeeList.iterator();
     }
+
+    public void removeEmployee(Employee employee) {
+        employeeList.remove(employee);
+    }
 }
