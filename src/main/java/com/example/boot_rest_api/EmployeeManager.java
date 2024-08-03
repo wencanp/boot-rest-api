@@ -4,10 +4,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class EmployeeManager {
+
     private static Employees list = new Employees();
 
-    //  Initialize service and fill with several employee entity
-    static {
+    static
+    {
         list.getEmployeeList().add(
                 new Employee("1",
                         "John",
@@ -28,9 +29,7 @@ public class EmployeeManager {
                         "Manager"));
     }
 
-    public Employees getAllEmployees() {
-        return list;
-    }
+    public Employees getAllEmployees() { return list; }
 
     public void addEmployee(Employee employee) {
         list.getEmployeeList().add(employee);
