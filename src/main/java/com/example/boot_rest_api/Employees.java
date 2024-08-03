@@ -1,10 +1,13 @@
 package com.example.boot_rest_api;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class Employees implements Iterable<Employee> {
+    @JsonProperty("Employees")
     private List<Employee> employeeList;
 
     public List<Employee> getEmployeeList() {
