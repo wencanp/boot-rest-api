@@ -20,6 +20,9 @@ implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 implementation 'org.springframework.boot:spring-boot-starter-validation'
 ```
 Verifying with [postman](https://www.postman.com/)
+## Commmand
+`./gradlew build` to build the project
+`./gradlew bootRun` to start the application
 ## Thanks
 - [Forage simulation - hp software engineering](https://www.theforage.com/simulations/hewlett-packard-enterprise/software-engineering-pcij)
 - [How to create a REST API using Java Spring Boot](https://www.geeksforgeeks.org/how-to-create-a-rest-api-using-java-spring-boot/)
